@@ -1,6 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#ifdef _WIN32
+    #include <windows.h>
+#else
+    #include <unistd.h>
+#endif
+
+void delay(int seconds) {
+#ifdef _WIN32
+    Sleep(seconds * 1000); // convert to milliseconds
+#else
+    sleep(seconds);
+#endif
+}
 
 
 int main() {
