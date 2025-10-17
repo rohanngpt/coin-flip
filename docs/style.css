@@ -1,0 +1,83 @@
+:root{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #6ee7b7;
+  --muted: #9aa7b2;
+  --glass: rgba(255,255,255,0.03);
+  --radius: 12px;
+  --gap: 14px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg,#071021 0%, #071626 60%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+}
+
+.container{
+  max-width:900px;
+  width:100%;
+  display:grid;
+  gap:18px;
+  grid-template-rows:auto 1fr auto;
+}
+
+h1{margin:0 0 6px 0;font-size:28px}
+h2{margin:0 0 8px 0;font-size:18px}
+
+.card{
+  background:var(--glass);
+  padding:16px;
+  border-radius:var(--radius);
+  box-shadow:0 6px 18px rgba(2,6,23,0.5);
+  backdrop-filter: blur(6px);
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+.controls .row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.row.center{justify-content:center}
+.choice-block{text-align:center;min-width:120px}
+.btn-group{display:flex;gap:8px}
+.btn{
+  padding:8px 14px;
+  border-radius:10px;
+  border:0;
+  background:transparent;
+  color:var(--accent);
+  cursor:pointer;
+  font-weight:600;
+  box-shadow:inset 0 0 0 1px rgba(110,231,183,0.08);
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{
+  background:linear-gradient(90deg, #0ea5a6, #06b6d4);
+  color:#042022;
+  box-shadow: 0 6px 18px rgba(10,200,180,0.12);
+}
+.btn:disabled{opacity:0.45;cursor:not-allowed;transform:none}
+
+.muted{color:var(--muted);font-size:13px}
+.player2-choice{font-weight:700;color:#ffd580;margin:6px 0}
+
+.results .summary{display:flex;gap:18px;margin-bottom:12px;font-size:15px}
+.flips{display:flex;flex-direction:column;gap:6px;max-height:320px;overflow:auto;padding-right:6px}
+.flip-row{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;background:rgba(255,255,255,0.01)}
+.flip-row .label{font-weight:600}
+.flip-heads{color:#ffecb3}
+.flip-tails{color:#c2f7ff}
+
+.final{margin-top:12px;padding:12px;border-radius:10px;background:linear-gradient(90deg,#062024, #092634);font-weight:700}
+.vs{font-weight:800;color:var(--muted);padding:6px 10px}
+.foot{font-size:13px;text-align:center;margin-top:8px}
+
+/* small style hook for selected button */
+.selected{box-shadow:0 6px 18px rgba(110,231,183,0.12);transform:translateY(-2px)}
