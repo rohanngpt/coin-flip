@@ -1,0 +1,35 @@
+# ---- macOS system files ----
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
+
+# ---- Node / Web / Build folders ----
+node_modules/
+dist/
+build/
+.env
+
+# ---- Emscripten SDK ----
+emsdk/
+upstream/
+cache/
+
+# ---- Python (if you ever use it) ----
+__pycache__/
+*.pyc
+
+# ---- IDE / Editor folders ----
+.vscode/
+.idea/
+*.swp
+
+# ---- Logs / Misc ----
+*.log
+*.tmp
+*.bak
+*.lock
+
+# ---- OS or hidden ----
+Thumbs.db
+desktop.ini
