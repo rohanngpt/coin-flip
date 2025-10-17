@@ -47,6 +47,11 @@ int main() {
             score1++;
         if (flips[i] == user2_choice)
             score2++;
+
+        delay(2);    
+
+        
+        
         
     }
 
